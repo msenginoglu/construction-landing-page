@@ -11,6 +11,19 @@
     <meta name="author" content="YapıTech İnşaat" />
     <link rel="canonical" href="https://www.yapitech.com/" />
 
+    <!-- Additional Meta for Behance Showcase -->
+    <meta name="theme-color" content="#ff6b00" />
+    <meta
+      name="keywords"
+      content="inşaat, yapı, mimari, konut projeleri, ticari yapılar, restorasyon, yapı çözümleri, inşaat firması"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
     <!-- Open Graph Meta Tags -->
     <meta
       property="og:title"
@@ -26,6 +39,8 @@
     />
     <meta property="og:url" content="https://www.yapitech.com/" />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="YapıTech İnşaat" />
+    <meta property="og:locale" content="tr_TR" />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -41,8 +56,23 @@
       name="twitter:image"
       content="https://www.yapitech.com/images/twitter-image.jpg"
     />
+    <meta name="twitter:creator" content="@YapiTech" />
 
     <title>YapıTech İnşaat | Kaliteli ve Güvenilir Yapı Çözümleri</title>
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="preload" href="script.js" as="script" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      as="style"
+    />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -65,6 +95,10 @@
       type="image/svg+xml"
     />
 
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
     <!-- Yapılandırılmış Veri (JSON-LD) -->
     <script type="application/ld+json">
       {
@@ -83,7 +117,8 @@
           "https://www.facebook.com/yapitech",
           "https://www.twitter.com/yapitech",
           "https://www.instagram.com/yapitech",
-          "https://www.linkedin.com/company/yapitech"
+          "https://www.linkedin.com/company/yapitech",
+          "https://www.behance.net/yapitech"
         ],
         "address": {
           "@type": "PostalAddress",
@@ -97,20 +132,34 @@
       }
     </script>
 
+    <!-- Portfolio Schema for Behance -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "YapıTech İnşaat Web Projesi",
+        "creator": {
+          "@type": "Organization",
+          "name": "YapıTech İnşaat"
+        },
+        "abstract": "YapıTech İnşaat için tasarlanmış göze hitap eden, kullanıcı dostu ve sunum odaklı web sitesi projesi.",
+        "keywords": "web tasarımı, inşaat, responsive tasarım, mimari, sunum"
+      }
+    </script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
     <!-- Header Section -->
     <header class="header" id="header">
       <div class="container nav-container">
-        <a href="#home" class="logo">
-          <img
-            src="https://placehold.co/40x40/ff6b00/FFFFFF?text=YT"
-            alt="YapıTech Logo"
-          />
-          Yapı<span>Tech</span>
-        </a>
+        <a href="#home" class="logo"> Yapı<span>Tech</span> </a>
 
         <div class="hamburger" id="hamburger">
           <span class="hamburger-line"></span>
@@ -147,7 +196,7 @@
       id="home"
       style="
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-          url('https://placehold.co/1200x800/222222/FFFFFF?text=YapıTech+İnşaat')
+          url('https://images.unsplash.com/photo-1587582423116-ec07293f0395?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
             no-repeat center center/cover;
       "
     >
@@ -173,7 +222,7 @@
           <div class="service-card">
             <div class="service-img">
               <img
-                src="https://placehold.co/400x200/ff6b00/FFFFFF?text=Konut+Projeleri"
+                src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Konut Projeleri"
                 loading="lazy"
               />
@@ -182,8 +231,7 @@
               <h3 class="service-title">Konut Projeleri</h3>
               <p class="service-description">
                 Modern ve fonksiyonel konut projeleri ile yaşam alanlarınızı
-                yeniden tanımlıyoruz. Daire, villa ve toplu konut projeleriniz
-                için kaliteli çözümler sunuyoruz.
+                yeniden tanımlıyoruz. Projeleriniz için çözümler sunuyoruz.
               </p>
               <a href="#" class="service-link">
                 Detaylı Bilgi <i class="fas fa-arrow-right"></i>
@@ -194,7 +242,7 @@
           <div class="service-card">
             <div class="service-img">
               <img
-                src="https://placehold.co/400x200/ff6b00/FFFFFF?text=Ticari+Yapılar"
+                src="https://images.unsplash.com/photo-1512403754473-27835f7b9984?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Ticari Yapılar"
                 loading="lazy"
               />
@@ -214,7 +262,7 @@
           <div class="service-card">
             <div class="service-img">
               <img
-                src="https://placehold.co/400x200/ff6b00/FFFFFF?text=Restorasyon"
+                src="https://images.unsplash.com/photo-1691844204593-9b33cc7cbb5d?q=80&w=1970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Restorasyon"
                 loading="lazy"
               />
@@ -240,7 +288,7 @@
         <div class="about-container">
           <div class="about-img">
             <img
-              src="https://placehold.co/600x400/333333/FFFFFF?text=YapıTech+İnşaat+Hakkında"
+              src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="YapıTech İnşaat Hakkında"
               loading="lazy"
             />
@@ -346,8 +394,8 @@
             <div class="testimonial-slide active">
               <div class="testimonial-img">
                 <img
-                  src="https://placehold.co/80x80/ff6b00/FFFFFF?text=AY"
-                  alt="Ahmet Yılmaz"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Kamuran KARARAN"
                   loading="lazy"
                 />
               </div>
@@ -358,15 +406,15 @@
                 detayları bile düşünmeleri ve her aşamada bilgilendirmeleri bizi
                 çok memnun etti.
               </p>
-              <h4 class="testimonial-author">Ahmet Yılmaz</h4>
-              <p class="testimonial-position">ABC Şirketi CEO'su</p>
+              <h4 class="testimonial-author">Kamuran KARARAN</h4>
+              <p class="testimonial-position">Kararan Şirketi CEO'su</p>
             </div>
 
             <div class="testimonial-slide">
               <div class="testimonial-img">
                 <img
-                  src="https://placehold.co/80x80/ff6b00/FFFFFF?text=AD"
-                  alt="Ayşe Demir"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Sümbül BÜLBÜL"
                   loading="lazy"
                 />
               </div>
@@ -377,15 +425,15 @@
                 takdire şayan. Ekip çok özenli ve işini bilen kişilerden
                 oluşuyor.
               </p>
-              <h4 class="testimonial-author">Ayşe Demir</h4>
+              <h4 class="testimonial-author">Sümbül BÜLBÜL</h4>
               <p class="testimonial-position">Ev Sahibi</p>
             </div>
 
             <div class="testimonial-slide">
               <div class="testimonial-img">
                 <img
-                  src="https://placehold.co/80x80/ff6b00/FFFFFF?text=MK"
-                  alt="Mehmet Kaya"
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Cabbar KAYNAR"
                   loading="lazy"
                 />
               </div>
@@ -395,8 +443,8 @@
                 bütçeyi aşmamaları ve her aşamada şeffaf olmaları nedeniyle
                 gelecek projelerimizde de kesinlikle birlikte çalışacağız.
               </p>
-              <h4 class="testimonial-author">Mehmet Kaya</h4>
-              <p class="testimonial-position">XYZ AVM Yöneticisi</p>
+              <h4 class="testimonial-author">Cabbar KAYNAR</h4>
+              <p class="testimonial-position">Kaynar AVM Yöneticisi</p>
             </div>
           </div>
 
